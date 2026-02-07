@@ -35,7 +35,7 @@
 
 <section class="page-hero">
   <h1>Kontakt</h1>
-  <p>Pozovi, pi&#353;i na WhatsApp ili do&#273;i na Rableovu 26.</p>
+  <p>Pozovi, pi&#353;i na WhatsApp ili do&#273;i li&#269;no. Radimo svaki dan do 23:30.</p>
 </section>
 
 <section>
@@ -69,37 +69,37 @@
         <table class="hours-table">
           
           <tr>
-            <td>Ponedeljak</td>
+            <td>ponedeljak</td>
             <td>08:00-23:30</td>
           </tr>
           
           <tr>
-            <td>Utorak</td>
+            <td>utorak</td>
             <td>08:00-23:30</td>
           </tr>
           
           <tr>
-            <td>Sreda</td>
+            <td>sreda</td>
             <td>08:00-23:30</td>
           </tr>
           
           <tr>
-            <td>&#268;etvrtak</td>
+            <td>&#269;etvrtak</td>
             <td>08:00-23:30</td>
           </tr>
           
           <tr>
-            <td>Petak</td>
+            <td>petak</td>
             <td>08:00-23:30</td>
           </tr>
           
           <tr>
-            <td>Subota</td>
+            <td>subota</td>
             <td>08:00-23:30</td>
           </tr>
           
           <tr>
-            <td>Nedelja</td>
+            <td>nedelja</td>
             <td>08:00-23:30</td>
           </tr>
           
@@ -146,4 +146,8 @@ var header = document.getElementById('header');
 if (header) window.addEventListener('scroll', function() { header.classList.toggle('scrolled', window.scrollY > 10); });
 function toggleMenu() { var m = document.getElementById('mobileMenu'); if (m) m.classList.toggle('open'); }
 var fadeObserver = new IntersectionObserver(function(entries) { entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('visible'); fadeObserver.unobserve(e.target); } }); }, { threshold: 0.1 });
-document.querySelectorAll('.fade-in').forEach(function(el) { var rect = el.getBoundingClientRect(); if (rect.top < window.innerHeight && rect.bottom > 0) { el.classList.add('visible'); } else { fadeObserver.observe(el); 
+document.querySelectorAll('.fade-in').forEach(function(el) { var rect = el.getBoundingClientRect(); if (rect.top < window.innerHeight && rect.bottom > 0) { el.classList.add('visible'); } else { fadeObserver.observe(el); } });
+var yearEl = document.getElementById('copyright-year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
